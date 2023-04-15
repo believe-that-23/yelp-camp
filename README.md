@@ -1,6 +1,5 @@
-# yelp-camp
+# Yelp-Camp
 
-Extensry is a super cool browser extension that greets you with a message according to the time of the day and shows different background on page refresh. With Extensry you can set your main/focus task of the day ansd also create your own todo.
 [Yelp-Camp](https://yelp-camp-2023.cyclic.app/) is a CRUD based app which allows us to view various campgrounds that are available in the world. It also allows to to give our honest opinions in form of reviews about the campgrounds as well. We can also view various images of the campgrounds/
 
 
