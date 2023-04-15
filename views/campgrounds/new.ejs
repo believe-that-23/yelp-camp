@@ -1,0 +1,42 @@
+<% layout('layouts/boilerplate') %>
+    <h1>Add new Campground:</h1>
+    <form enctype="multipart/form-data" class='validation-check' action="/campgrounds" method="post" novalidate>
+        <div class="col-md-4 mt-3">
+            <label for="title">Title</label>
+            <input class="form-control" required type="text" id="title" name="campground[title]" required>
+            <div class="valid-feedback">
+                Looks good!
+            </div>
+        </div>
+        <div class="col-md-4 mt-3">
+            <label for="location">Location</label>
+            <input class="form-control" required type="text" id="location" name="campground[location]" required>
+            <div class="valid-feedback">
+                Looks good!
+            </div>
+        </div>
+        <div class="col-md-4 mt-3">
+            <label for="price">Price</label>
+            <input class="form-control" required type="number" id="price" name="campground[price]" required>
+            <div class="valid-feedback">
+                Looks good!
+            </div>
+        </div>
+        <div class="col-md-4 mt-3 ">
+            <label for="description">description</label>
+            <input class="form-control" required type="text" id="description" name="campground[description]">
+            <div class="valid-feedback">
+                Looks good!
+            </div>
+        </div>
+        <div class="col-md-4 mt-3">
+            <label for="image" class="form-label">Add Images </label>
+            <br>
+            <input type="file" name="image" id="image" multiple>
+            <div class="valid-feedback">
+                Looks good!
+            </div>
+        </div>
+        <button class='btn btn-success mt-3'>Add Campground</button>
+    </form>
+    <a class="mt-3 btn btn-secondary" href="/campgrounds">cancel</a>
