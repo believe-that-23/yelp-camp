@@ -46,7 +46,7 @@
                         <%=campground.author.username%>
                     </li>
                     <li class="list-group-item">
-                        <%=campground.price%>
+                        $ <%=campground.price%>
                     </li>
                 </ul>
                 <% if (currentUser && campground.author.equals(currentUser._id)) { %>
