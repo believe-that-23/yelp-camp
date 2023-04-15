@@ -7,8 +7,11 @@
 [Home Page](https://yelp-camp-2023.cyclic.app/)
 - In the home page, you can start viewing different campgrounds, or you also can register and then create your own campgrounds. You can also login if you also have registed before.
 
-Campground Page
--   In the Campgroud page, you see a map which shows different locations of different campgrounds. You can view the individual campground using map and we also have brief description about all the campgrounds that are listed with us.
+[Campground Page](https://yelp-camp-2023.cyclic.app/campgrounds)
+- In the Campgroud page, you see a map which shows different locations of different campgrounds. You can view the individual campground using map and we also have brief description about all the campgrounds that are listed with us.
+
+[Playground](https://yelp-camp-2023.cyclic.app/campgrounds)
+- In the Playground you can read the description about the playground, see the various images of the playground and also leave reviews if you are logged in.
 
 
 ## Tech Stack
