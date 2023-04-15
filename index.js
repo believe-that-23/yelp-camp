@@ -15,7 +15,7 @@ const User = require('./models/user');
 const mongoSanitize = require('express-mongo-sanitize');
 const ExpressError = require('./utils/ExpressError')
 const dbKey = process.env.DB_KEY;
-const MongoDBStore = require('connect-mongo')(session);
+const MongoDBStore = require('connect-mongo');
 
 
 const userRoutes = require('./routes/users')
@@ -55,9 +55,6 @@ const store = new MongoDBStore({
     touchAfter: 24 * 60 * 60
 });
 
-store.on("error", function (e) {
-    console.log("Session store down", e)
-})
 
 const sessionConfig = {
     name: 'session',
@@ -72,7 +69,10 @@ const sessionConfig = {
 }
 
 
-app.use(session(sessionConfig));
+app.use(session({
+    sessionConfig,
+    store: MongoDBStore.create(store)
+}));
 app.use(flash());
 
 app.use(passport.initialize());
