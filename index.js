@@ -13,7 +13,8 @@ const passport = require('passport');
 const LocalStrategy = require('passport-local');
 const User = require('./models/user');
 const mongoSanitize = require('express-mongo-sanitize');
-const ExpressError = require('./utils/ExpressError')
+const ExpressError = require('./utils/ExpressError');
+const MongoStore = require('connect-mongo');
 const dbKey = process.env.DATABASE_URI || 'mongodb://127.0.0.1:27017/test';
 
 
@@ -49,7 +50,14 @@ app.use(mongoSanitize());
 const secret = process.env.SECRET || 'thiscouldbebetter'
 
 
+const store = MongoStore.create({
+    url: dbKey,
+    secret,
+    touchAfter: 24 * 60 * 60
+})
+
 const sessionConfig = {
+    store,
     name: 'session',
     secret,
     resave: false,
