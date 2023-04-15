@@ -21,7 +21,8 @@ const MongoDBStore = require('connect-mongo')(session);
 const userRoutes = require('./routes/users')
 const campgroundRoutes = require('./routes/campgrounds');
 const reviewRoutes = require('./routes/reviews');
-const MongoStore = require('connect-mongo');
+
+
 
 mongoose.connect(dbKey)
     .then(() => {
