@@ -1,6 +1,6 @@
 # Yelp-Camp
 
-[Yelp-Camp](https://yelp-camp-2023.cyclic.app/) is a CRUD based app which allows us to view various campgrounds that are available in the world. It also allows to to give our honest opinions in form of reviews about the campgrounds as well. We can also view various images of the campgrounds/
+[Yelp-Camp](https://yelp-camp-2023.cyclic.app/) is a CRUD based app which allows us to view various campgrounds that are available in the world. It also allows to to give our honest opinions in form of reviews about the campgrounds as well. We can also view various images of the campgrounds.
 
 
 ## List of features
