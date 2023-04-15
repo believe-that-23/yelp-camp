@@ -46,19 +46,21 @@ app.use(methodOverride('_method'));
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(mongoSanitize());
 
+const secret = process.env.SECRET || 'thiscouldbebetter'
+
 const store = new MongoDBStore({
     url: dbKey,
-    secret: 'thiscouldbebetter',
-    touchAfter:24*60*60
+    secret,
+    touchAfter: 24 * 60 * 60
 });
 
-store.on("error", function(e) {
+store.on("error", function (e) {
     console.log("Session store down", e)
 })
 
 const sessionConfig = {
     name: 'session',
-    secret: 'thiscouldbebetter',
+    secret,
     resave: false,
     saveUninitialized: true,
     cookie: {
@@ -114,6 +116,8 @@ app.use((err, req, res, next) => {
     res.status(statusCode).render('error', { err })
 })
 
-app.listen(3000, () => {
+const port = process.env.PORT || 3000
+
+app.listen(port, () => {
     console.log('server running on port 3000')
 })
